@@ -24,8 +24,6 @@ class AntiPatternObserver(ABC):
         pass
     
 
-
-
     
 class AntiPatternObservable():
     
@@ -34,13 +32,13 @@ class AntiPatternObservable():
     
     def add_observer(self, oberver):
         self.__observers.append(oberver)
-#        print("Observer has been added")
+        print("Observer has been added")
     
-#    def delete_observer(self, observer):
-#        self.__observers.remove(observer)
+    def delete_observer(self, observer):
+        self.__observers.remove(observer)
         
     def notify_observer(self, *args):
-#        print("Observer has been notified")
+        print("Observer has been notified")
         for observer in self.__observers:
             observer.write_anti_pattern_to_file( *args)
             
